@@ -1,16 +1,19 @@
 {
-  "name": "class-validation-ts",
+  "name": "@akifcan/class-validation-ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "I created this package for create a package using ts. not for production",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly": "npm run format && npm run lint",
+    "preversion": "npm run lint"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akifcan",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.6.2",
